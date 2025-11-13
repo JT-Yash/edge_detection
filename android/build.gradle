@@ -43,14 +43,17 @@ android {
     }
 
     packagingOptions {
-        jniLibs {
-            useLegacyPackaging = true
-            excludes += [
-                "lib/x86/**",
-                "lib/x86_64/**"
+    jniLibs {
+        useLegacyPackaging = true
+        excludes += [
+            "lib/x86/**",
+            "lib/x86_64/**",
+            "lib/mips/**",
+            "lib/mips64/**"
             ]
         }
     }
+
     
     buildFeatures {
         viewBinding = true
